@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physik - Themenübersicht</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #60a5fa;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+        }
+        .card h2 {
+            color: #60a5fa;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Physik</h1>
+    <div class="grid">
+        <a href="physik-mechanik.html" class="card">
+            <h2>Mechanik</h2>
+            <p>gebrochene Zahlen, Dezimalzahlen, Zahlenbereiche, Terme und Gleichungen, reelle Zahlen, Wurzlen, Potenzen</p>
+        </a>
+        <a href="physik-elektrodynamik.html" class="card">
+            <h2>Elektrodynamik</h2>
+            <p>Flächen und Körper in zwei und drei Dimensionen, Trigonometrie, Koordiantensysteme</p>
+        </a>
+        <a href="physik-optik" class="card">
+            <h2>Licht und Optik</h2>
+            <p>Lineare Funktionen, Quadratische Funktionen, Lineare Gleichungssysteme, Potenzfunktionen</p>
+        </a>
+        <a href="physik-materie" class="card">
+            <h2>Struktur der Materie</h2>
+            <p>Ableitungen, Steigung, Extremstellen und Kurvendiskussion.</p>
+        </a>
+        <a href="physik-thermodynamik" class="card">
+            <h2>Thermodynamik</h2>
+            <p>Stammfunktionen, Flächenberechnung und Integrationsregeln.</p>
+        </a>
+        <a href=physik-quantenphysikk.html" class="card">
+            <h2>Quantenphysik</h2>
+            <p>Zufallsexperimente, Kombinatorik und Wahrscheinlichkeitsverteilungen.</p>
+        </a>
+    </div>
+</body>
+</html>
