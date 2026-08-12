@@ -27,6 +27,7 @@
             gap: 20px;
             width: 100%;
             max-width: 1000px;
+            margin-bottom: 60px; /* Ein bisschen Abstand nach unten zu den neuen Feldern */
         }
         .card {
             background-color: #1e1e1e;
@@ -52,6 +53,45 @@
             color: #a0a0a0;
             font-size: 0.95rem;
             line-height: 1.5;
+        }
+        /* Neue Styles für die Formulare, damit der HTML-Code unten aufgeräumter ist */
+        .form-section {
+            width: 100%;
+            max-width: 1000px;
+            background: #1e1e1e;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            margin-bottom: 40px;
+            box-sizing: border-box;
+        }
+        .form-section h2 {
+            color: #60a5fa;
+            margin-top: 0;
+        }
+        .form-section p {
+            color: #a0a0a0;
+        }
+        .form-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background: #121212;
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-family: inherit;
+        }
+        .form-btn {
+            background-color: #60a5fa;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: auto;
         }
     </style>
 </head>
@@ -83,5 +123,47 @@
             <p>Zufallsexperimente, Kombinatorik und Wahrscheinlichkeitsverteilungen</p>
         </a>
     </div>
+
+    <!-- HIER STARTEN DIE NEUEN BEREICHE -->
+
+    <!-- BEREICH FÜR PRIVATE NACHRICHTEN -->
+    <div class="form-section">
+        <h2>Hast du eine private Frage an mich?</h2>
+        <p>Schreib mir hier und ich antworte dir per E-Mail.</p>
+        
+        <form action="https://formspree.io/f/DEINE_FORMSPREE_ID" method="POST">
+            <input type="text" name="name" placeholder="Dein Name" required class="form-input">
+            <input type="email" name="email" placeholder="Deine E-Mail" required class="form-input">
+            <textarea name="message" rows="4" placeholder="Deine Nachricht..." required class="form-input" style="resize: vertical;"></textarea>
+            <button type="submit" class="form-btn">Senden</button>
+        </form>
+    </div>
+
+    <!-- BEREICH FÜR ÖFFENTLICHE KOMMENTARE (Giscus) -->
+    <div class="form-section">
+        <h2>Öffentliche Kommentare</h2>
+        <p>Diskutiere mit anderen oder stell Fragen zu den Themen.</p>
+        
+        <!-- Hier wird Giscus die Kommentare laden -->
+        <div class="giscus"></div>
+        
+        <!-- Das Skript für Giscus -->
+        <script src="https://giscus.app/client.js"
+            data-repo="DEIN-GITHUB-NAME/DEIN-REPO-NAME"
+            data-repo-id="DEINE_REPO_ID"
+            data-category="Announcements"
+            data-category-id="DEINE_KATEGORIE_ID"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="dark"
+            data-lang="de"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+
 </body>
 </html>
