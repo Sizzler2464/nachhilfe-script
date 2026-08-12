@@ -83,5 +83,46 @@
             <p>Zufallsexperimente, Kombinatorik und Wahrscheinlichkeitsverteilungen.</p>
         </a>
     </div>
+
+    <!-- HIER STARTEN DIE NEUEN BEREICHE -->
+
+    <!-- BEREICH FÜR PRIVATE NACHRICHTEN -->
+    <div class="form-section">
+        <h2>Hast du eine private Frage an mich?</h2>
+        <p>Schreib mir hier und ich antworte dir per E-Mail.</p>
+        
+        <form action="https://formspree.io/f/xqpzbbaa" method="POST">
+            <input type="text" name="name" placeholder="Dein Name" required class="form-input">
+            <input type="email" name="email" placeholder="Deine E-Mail" required class="form-input">
+            <textarea name="message" rows="4" placeholder="Deine Nachricht..." required class="form-input" style="resize: vertical;"></textarea>
+            <button type="submit" class="form-btn">Senden</button>
+        </form>
+    </div>
+
+    <!-- BEREICH FÜR ÖFFENTLICHE KOMMENTARE (Giscus) -->
+    <div class="form-section">
+        <h2>Öffentliche Kommentare</h2>
+        <p>Diskutiere mit anderen oder stell Fragen zu den Themen.</p>
+        
+        <!-- Hier wird Giscus die Kommentare laden -->
+        <div class="giscus"></div>
+        
+        <!-- Das Skript für Giscus -->
+        <script src="https://giscus.app/client.js"
+            data-repo="DEIN-GITHUB-NAME/DEIN-REPO-NAME"
+            data-repo-id="DEINE_REPO_ID"
+            data-category="Announcements"
+            data-category-id="DEINE_KATEGORIE_ID"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="dark"
+            data-lang="de"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
 </body>
 </html>
