@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantenphysik - Skripte & Übungen</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #60a5fa;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .content-container {
+            width: 100%;
+            max-width: 800px;
+        }
+        .topic-section {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .topic-section h2 {
+            color: #60a5fa;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        .topic-section p {
+            color: #c0c0c0;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+        }
+        .download-btn:hover {
+            background-color: #1d4ed8;
+        }
+        .back-link {
+            color: #60a5fa;
+            text-decoration: none;
+            margin-bottom: 30px;
+            align-self: flex-start;
+            margin-left: calc(50% - 400px); 
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Anpassung für den Zurück-Link */
+        @media (max-width: 850px) {
+            .back-link {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content-container">
+        <a href="physik.html" class="back-link">← Zurück zur Übersicht</a>
+        
+        <h1>Quantenphysik</h1>
+        <p class="subtitle">Skripte und Übungsaufgaben zum Download</p>
+
+        <!-- Thema 1 -->
+        <div class="topic-section">
+            <h2>Lichtquanten und der äußere photoelektrische Effekt</h2>
+            <p>Widersprüche zur Wellentheorie des Lichts, Einsteins Lichtquantenhypothese (Photonenmodell), Energie eines Photons und die Gegenfeldmethode zur Bestimmung des Wirkungsquantum[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Photoelektrischer_Effekt_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Photoeffekt.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 2 -->
+        <div class="topic-section">
+            <h2>Wellen-Teilchen-Dualismus und de-Broglie-Wellen</h2>
+            <p>Der Impuls des Photons, Interferenzerscheinungen bei Elektronen und anderen Teilchen sowie die de-Broglie-Wellenlänge von Materiewellen[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Wellen_Teilchen_Dualismus_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Materiewellen.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 3 -->
+        <div class="topic-section">
+            <h2>Grundaspekte der Quantentheorie</h2>
+            <p>Stochastische Vorhersagbarkeit, Doppelspaltexperimente bei geringer Intensität (Einzelteilchen-Interferenz), Wahrscheinlichkeitsinterpretation und Komplementarität[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Grundaspekte_Quantentheorie_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Quanten_Statistik.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 4 -->
+        <div class="topic-section">
+            <h2>Heisenberg’sche Unschärferelation</h2>
+            <p>Ort-Impuls-Unbestimmtheit und Energie-Zeit-Unbestimmtheit, Grenzen der klassischen Physik sowie die Unschärfe als fundamentale Eigenschaft von Quantenobjekten[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Unschaerferelation_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Unschaerferelation.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 5 -->
+        <div class="topic-section">
+            <h2>Atomvorstellungen und Energieniveaus</h2>
+            <p>Diskrete Energiezustände in der Atomhülle, das quantenmechanische Atommodell, Orbitale als Aufenthaltswahrscheinlichkeiten sowie der Franck-Hertz-Versuch[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Atomvorstellungen_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Atommodelle_Quanten.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 6 -->
+        <div class="topic-section">
+            <h2>Laserstrahlung und Anwendungen</h2>
+            <p>Das Prinzip der Erzeugung von Laserstrahlung, erzwungene Emission, Eigenschaften von Laserlicht sowie Anwendungen in Technik und Medizin[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Laser_Quantenoptik_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Laserstrahlung.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
