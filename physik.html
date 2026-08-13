@@ -53,6 +53,56 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
+        .form-section {
+            margin-top: 50px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .form-section h2 {
+            color: #60a5fa;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .form-section p {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .form-input:focus {
+            border-color: #60a5fa;
+            outline: none;
+        }
+        .form-btn {
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            background-color: #60a5fa;
+            color: #121212;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            align-self: flex-start;
+        }
+        .form-btn:hover {
+            background-color: #3b82f6;
+        }
     </style>
 </head>
 <body>
@@ -71,8 +121,8 @@
             <p>Eigenschaften, Abbildungen, Interferenz und Beugung</p>
         </a>
         <a href="physik-materie" class="card">
-            <h2>Welle-Teilchen-Dualismus, Atome, Moleküle, Festkörper, Kernphysik</h2>
-            <p></p>
+            <h2>Struktur der Materie</h2>
+            <p>Welle-Teilchen-Dualismus, Atome, Moleküle, Festkörper, Kernphysik</p>
         </a>
         <a href="physik-thermodynamik" class="card">
             <h2>Thermodynamik</h2>
