@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemie - Themenübersicht</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #60a5fa;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+        }
+        .card h2 {
+            color: #60a5fa;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chemie</h1>
+    <div class="grid">
+        
+        <!-- Thema 1: Grundlagen -->
+        <a href="chemie-atombau.html" class="card">
+            <h2>Atombau und Periodensystem</h2>
+            <p>Aufbau der Atome, Elektronenkonfiguration, Arten der chemischen Bindung und das Periodensystem der Elemente.</p>
+        </a>
+
+        <!-- Thema 2: Anorganik -->
+        <a href="chemie-anorganik.html" class="card">
+            <h2>Anorganische Chemie</h2>
+            <p>Eigenschaften der Elemente, Säuren und Basen, Salze, Metalle sowie Redoxreaktionen und Elektrochemie.</p>
+        </a>
+
+        <!-- Thema 3: Organik -->
+        <a href="chemie-organik.html" class="card">
+            <h2>Organische Chemie</h2>
+            <p>Aufbau und Reaktionen von Kohlenwasserstoffen, funktionelle Gruppen, Kunststoffe sowie Naturstoffe (Fette, Kohlenhydrate, Eiweiße).</p>
+        </a>
+
+        <!-- Thema 4: Rechnen -->
+        <a href="chemie-stoechiometrie.html" class="card">
+            <h2>Stöchiometrie</h2>
+            <p>Chemisches Rechnen: Stoffmengen, Molmasse, Konzentrationen, Ausbeute und Umsatzberechnungen bei chemischen Reaktionen.</p>
+        </a>
+
+        <!-- Thema 5: Physikalische Chemie -->
+        <a href="chemie-physikalische-chemie.html" class="card">
+            <h2>Physikalische Chemie</h2>
+            <p>Energetik chemischer Reaktionen, Reaktionsgeschwindigkeit, Katalyse und das chemische Gleichgewicht (Massenwirkungsgesetz).</p>
+        </a>
+
+        <!-- Thema 6: Analytik -->
+        <a href="chemie-analytik.html" class="card">
+            <h2>Analytische Chemie</h2>
+            <p>Klassische Nachweisreaktionen für Ionen, Titrationen (Säure-Base, Redox) sowie moderne instrumentelle Analyseverfahren.</p>
+        </a>
+        
+    </div>
+
+    <!-- HIER STARTEN DIE NEUEN BEREICHE -->
+
+    <!-- BEREICH FÜR PRIVATE NACHRICHTEN -->
+    <div class="form-section">
+        <h2>Hast du eine private Frage an mich?</h2>
+        <p>Schreib mir hier und ich antworte dir per E-Mail.</p>
+        
+        <form action="https://formspree.io/f/xqpzbbaa" method="POST">
+            <input type="text" name="name" placeholder="Dein Name" required class="form-input">
+            <input type="email" name="email" placeholder="Deine E-Mail" required class="form-input">
+            <textarea name="message" rows="4" placeholder="Deine Nachricht..." required class="form-input" style="resize: vertical;"></textarea>
+            <button type="submit" class="form-btn">Senden</button>
+        </form>
+    </div>
+
+    <!-- BEREICH FÜR ÖFFENTLICHE KOMMENTARE (Giscus) -->
+    <div class="form-section">
+        <h2>Öffentliche Kommentare</h2>
+        <p>Diskutiere mit anderen oder stell Fragen zu den Themen.</p>
+        
+        <!-- Hier wird Giscus die Kommentare laden -->
+        <div class="giscus"></div>
+        
+        <!-- Das Skript für Giscus -->
+        <script src="https://giscus.app/client.js"
+            data-repo="DEIN-GITHUB-NAME/DEIN-REPO-NAME"
+            data-repo-id="DEINE_REPO_ID"
+            data-category="Announcements"
+            data-category-id="DEINE_KATEGORIE_ID"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="dark"
+            data-lang="de"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
+</body>
+</html>
