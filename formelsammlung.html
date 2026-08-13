@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktive Formelsammlung</title>
+    
+    <!-- Das Skript für echte Mathe-Formeln -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #60a5fa;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #suchfeld {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            border: 2px solid #333;
+            background-color: #1e1e1e;
+            color: white;
+            margin-bottom: 40px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        #suchfeld:focus {
+            border-color: #60a5fa;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .formel-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+        }
+        .formel-card h2 {
+            color: #60a5fa;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .math-display {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #121212;
+            border-radius: 5px;
+        }
+        .beschreibung {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Digitale Formelsammlung</h1>
+    
+    <input type="text" id="suchfeld" onkeyup="filterFormeln()" placeholder="Nach einer Formel suchen...">
+
+    <!-- HIER KOMMEN DEINE KACHELN REIN -->
+    <!-- Kachel 1.1: Variablen -->
+        <div class="formel-card">
+            <h2>Variablen</h2>
+            <div class="math-display">
+                $$\text{Formvariable vs. Lösungsvariable}$$
+            </div>
+            <div class="beschreibung">
+                <strong>Formvariable (Parameter):</strong> Steht für eine feste, aber oft noch unbestimmte Zahl. Sie gibt dem Term seine "Form" (z. B. $m$ und $n$ in $y = mx + n$).<br><br>
+                <strong>Lösungsvariable:</strong> Der eigentliche gesuchte Wert in einer Gleichung, der berechnet werden soll (z. B. $x$ in $2x + 4 = 10$).
+            </div>
+        </div>
+
+        <!-- Kachel 1.1: Terme -->
+        <div class="formel-card">
+            <h2>Terme</h2>
+            <div class="math-display">
+                $$3x^2 + 5y \quad \text{(Beispiel)}$$
+            </div>
+            <div class="beschreibung">Ein sinnvoller mathematischer Ausdruck, der aus Zahlen, Variablen und Rechenzeichen aufgebaut ist.<br><br><strong>Wichtig:</strong> Ein Term enthält niemals Relationszeichen wie $=$, $<$ oder $>$.</div>
+        </div>
+
+        <!-- Kachel 1.1: Aussage und Aussageformen -->
+        <div class="formel-card">
+            <h2>Aussagen & Aussageformen</h2>
+            <div class="math-display">
+                $$\text{Wahrheitswerte: } w \text{ (wahr), } f \text{ (falsch)}$$
+            </div>
+            <div class="beschreibung">
+                <strong>Aussage:</strong> Ein mathematischer Satz, der eindeutig wahr oder falsch ist (z. B. $3 > 1$).<br><br>
+                <strong>Aussageform:</strong> Enthält Variablen (z. B. $x > 1$). Sie ist weder wahr noch falsch, sondern erhält erst einen Wahrheitswert, wenn man konkrete Zahlen für die Variable einsetzt.
+            </div>
+        </div>
+
+        <!-- Kachel 1.1: Freie und gebundene Variablen -->
+        <div class="formel-card">
+            <h2>Freie & gebundene Variablen</h2>
+            <div class="math-display">
+                $$\text{Frei: } x > 5 \quad | \quad \text{Gebunden: } \forall x \dots$$
+            </div>
+            <div class="beschreibung">
+                <strong>Freie Variable:</strong> Steht in einer Aussageform und kann durch beliebige Werte aus der Grundmenge ersetzt werden.<br><br>
+                <strong>Gebundene Variable:</strong> Ist durch einen Quantor fest in die Aussage eingebunden und steht nicht mehr zur freien Einsetzung zur Verfügung.
+            </div>
+        </div>
+
+        <!-- Kachel 1.1: Existenzaussagen -->
+        <div class="formel-card">
+            <h2>Existenz- & Allaussagen</h2>
+            <div class="math-display">
+                $$\exists x \quad \text{und} \quad \forall x$$
+            </div>
+            <div class="beschreibung">
+                <strong>Existenzaussage ($\exists$):</strong> "Es existiert mindestens ein $x$, für das gilt..." (z. B. $\exists x \in \mathbb{R} : 2x = 4$).<br><br>
+                <strong>Allaussage ($\forall$):</strong> "Für alle $x$ gilt..." (Der Allquantor).
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Die Suchfunktion -->
+    <script>
+        function filterFormeln() {
+            let input = document.getElementById('suchfeld').value.toLowerCase();
+            let kacheln = document.getElementsByClassName('formel-card');
+
+            for (let i = 0; i < kacheln.length; i++) {
+                let text = kacheln[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    kacheln[i].style.display = "block";
+                } else {
+                    kacheln[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
