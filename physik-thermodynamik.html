@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermodynamik - Skripte & Übungen</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #60a5fa;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .subtitle {
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .content-container {
+            width: 100%;
+            max-width: 800px;
+        }
+        .topic-section {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .topic-section h2 {
+            color: #60a5fa;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        .topic-section p {
+            color: #c0c0c0;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+        }
+        .download-btn:hover {
+            background-color: #1d4ed8;
+        }
+        .back-link {
+            color: #60a5fa;
+            text-decoration: none;
+            margin-bottom: 30px;
+            align-self: flex-start;
+            margin-left: calc(50% - 400px); 
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Anpassung für den Zurück-Link */
+        @media (max-width: 850px) {
+            .back-link {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content-container">
+        <a href="physik.html" class="back-link">← Zurück zur Übersicht</a>
+        
+        <h1>Thermodynamik</h1>
+        <p class="subtitle">Skripte und Übungsaufgaben zum Download</p>
+
+        <!-- Thema 1 -->
+        <div class="topic-section">
+            <h2>Temperatur und Aggregatzustände</h2>
+            <p>Grundlagen zur physikalischen Größe Temperatur, temperaturbedingte Längen- und Volumenänderungen sowie die Aggregatzustandsänderungen von Körpern (Schmelzen, Sieden, Kondensieren)[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Temperatur_Aggregatzustaende_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Temperatur_Ausdehnung.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 2 -->
+        <div class="topic-section">
+            <h2>Thermische Energie und Wärme</h2>
+            <p>Die absolute Temperatur (Kelvinskala), die Änderung der thermischen Energie, das Berechnen von Wärme sowie die Arten der Energieübertragung (Leitung, Strahlung, Strömung)[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Thermische_Energie_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Waermekapazitaet.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 3 -->
+        <div class="topic-section">
+            <h2>Klimaphysik und Wärmepumpen</h2>
+            <p>Grundlagen des natürlichen und anthropogenen Treibhauseffekts, der Strahlungshaushalt der Erde sowie das physikalische Wirkprinzip von Kühlschrank und Wärmepumpe[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Klimaphysik_Waermepumpen_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungsaufgaben_Klimaphysik.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 4 -->
+        <div class="topic-section">
+            <h2>Das ideale Gas</h2>
+            <p>Die Zustandsgleichung für das ideale Gas, das allgemeine Gasgesetz sowie die Betrachtung isochorer, isobarer und isothermer Zustandsänderungen[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Ideales_Gas_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Gasgesetze.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 5 -->
+        <div class="topic-section">
+            <h2>Der erste Hauptsatz der Thermodynamik</h2>
+            <p>Anwendung des ersten Hauptsatzes (Änderung der inneren Energie durch Wärme und Volumenarbeit) auf spezielle Zustandsänderungen, inklusive adiabatischer Prozesse[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Erster_Hauptsatz_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Erster_Hauptsatz.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+
+        <!-- Thema 6 -->
+        <div class="topic-section">
+            <h2>Der zweite Hauptsatz und Kreisprozesse</h2>
+            <p>Reversible und irreversible Prozesse, der Carnot’sche Kreisprozess als Prinzip einer Wärmekraftmaschine, maximale Wirkungsgrade und Leistungszahlen[cite: 1].</p>
+            <div class="button-group">
+                <a href="physik-material/Zweiter_Hauptsatz_Kreisprozesse_Skript.pdf" class="download-btn" download>📄 Skript (PDF)</a>
+                <a href="physik-material/Uebungen_Kreisprozesse_Wirkungsgrad.pdf" class="download-btn" download>✏️ Übungen (PDF)</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
