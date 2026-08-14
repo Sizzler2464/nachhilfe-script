@@ -147,7 +147,29 @@
         
     </div>
 
-    <!-- HIER STARTEN DIE NEUEN BEREICHE -->
+    <!-- BEREICH FÜR AUFGABENABGABE -->
+    <div class="form-section">
+        <h2>📥 Aufgabenabgabe</h2>
+        <p>Lade hier deine bearbeitete Chemie-Aufgabe als PDF hoch.</p>
+        
+        <form action="https://formsubmit.co/e4cfe7f62d809997226509078bbcd98d" method="POST" enctype="multipart/form-data">
+            <!-- FormSubmit Einstellungen -->
+            <input type="hidden" name="_subject" value="Neue Chemie-Aufgabe abgegeben">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Praktisch: Da wir auf der Physik-Seite sind, übergeben wir das Fach unsichtbar mit -->
+            <input type="hidden" name="Fach" value="Chemie">
+
+            <input type="text" name="Name" placeholder="Dein Vor- und Nachname" required class="form-input">
+            
+            <input type="file" name="PDF_Datei" accept=".pdf,application/pdf" required class="form-input" style="padding: 7px; cursor: pointer;">
+            
+            <textarea name="Anmerkung" rows="3" placeholder="Anmerkungen oder Fragen zur Aufgabe..." class="form-input" style="resize: vertical;"></textarea>
+            
+            <button type="submit" class="form-btn">Aufgabe abgeben</button>
+        </form>
+    </div>
+
 
     <!-- BEREICH FÜR PRIVATE NACHRICHTEN -->
     <div class="form-section">
